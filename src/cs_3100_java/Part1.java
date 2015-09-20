@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class Part1 {
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
-		String regex = "\\b\\d\\d\\d-\\d\\d-\\d\\d\\d\\d";
+		String regex = "\\b\\d{3}-\\d{2}-\\d{4}";
 		Pattern pattern = Pattern.compile(regex);
 		String input = "";
 		while(s.hasNextLine()) {

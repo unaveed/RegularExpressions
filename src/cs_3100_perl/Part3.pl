@@ -1,7 +1,7 @@
 while(<STDIN>){
-	if (m/\(\d\d\d\)(\s|)\d\d\d-\d\d\d\d/g){
-		$count++;
-	}
+	$text .= $_;
 }
-
+while($text =~  m/(\n|\s)\(\d{3}\)\s?\d{3}-\d{4}/g){
+	$count++;
+}
 print $count;
